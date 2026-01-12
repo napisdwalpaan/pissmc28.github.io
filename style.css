@@ -1,0 +1,97 @@
+   body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #42db8a 0%, #4ab70f 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 40%;
+    margin-bottom: 20px;
+    border: 5px solid #c73636;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.bio {
+    font-size: 1.2em;
+    margin: 20px 0;
+    opacity: 0.9;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-button {
+    display: block;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 1.1em;
+}
+
+.link-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* Animasi klik tombol */
+.link-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-button.clicked {
+  transform: scale(0.9);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.link-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+.profile-pic {
+  width: 120px;       /* bebas mau 120–150px */
+  height: 120px;
+  border-radius: 50%; /* biar bulat */
+  object-fit: cover;  /* biar foto memenuhi bulatan */
+  display: block;
+  margin: 0 auto 10px; /* biar center */
+  border: 2px solid #fff;
+}
