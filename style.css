@@ -72,26 +72,22 @@ h1 {
         height: 120px;
     }
 }
-/* Animasi klik tombol */
-.link-button {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 .link-button.clicked {
-  transform: scale(0.9);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    animation: bounce 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-.link-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.05);
-}
-.profile-pic {
-  width: 120px;       /* bebas mau 120–150px */
-  height: 120px;
-  border-radius: 50%; /* biar bulat */
-  object-fit: cover;  /* biar foto memenuhi bulatan */
-  display: block;
-  margin: 0 auto 10px; /* biar center */
-  border: 2px solid #fff;
-}

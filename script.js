@@ -10,8 +10,12 @@ buttons.forEach(button => {
     button.classList.add("clicked");
 
     // Efek suara klik (opsional)
-    const sound = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
-    sound.play();
+    try {
+      const sound = new Audio("https://www.soundjay.com/buttons/sounds/button-09.mp3");
+      sound.play().catch(() => {}); // Ignore errors if audio fails
+    } catch (e) {
+      // Ignore audio errors
+    }
 
     // Ambil tujuan link
     const target = button.getAttribute("href");
