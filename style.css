@@ -1,42 +1,53 @@
    body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #42db8a 0%, #4ab70f 100%);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background-image: url("bg.pg.jpg");
+  background-size: cover;        /* biar penuh layar */
+  background-position: center;   /* gambar di tengah */
+  background-repeat: no-repeat;  /* ga ngulang */
+  min-height: 100vh;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
 
 .container {
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    width: 160;
+    height: 160;
+    border-radius:0%;
+    overflow: hidden;
+    margin: auto;
 }
 
+.container { /*untuk mengatur pp dan folder ada di tengah*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 .profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 40%;
-    margin-bottom: 20px;
-    border: 5px solid #c73636;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 5px solid #484d48
 }
 
 h1 {
     margin: 0;
     font-size: 2.5em;
+    color: rgb(252, 252, 252);
 }
 
 .bio {
     font-size: 1.2em;
     margin: 20px 0;
     opacity: 0.9;
+    color: rgb(255, 255, 255);
 }
 
 .links {
